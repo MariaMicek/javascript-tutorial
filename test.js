@@ -41,3 +41,14 @@ if (myAge < 18 || myAge > 30) {
 } else {
     document.write("I said: You can come!  ");
 }
+
+while (myAge < 30) {
+    console.log("You are less than 30");
+    myAge++;
+}
+document.write("You are over 30 now!  ");
+
+for (age= 5; age < 10; age++) {
+    console.log("You are less than 10");
+}
+document.write("You are over 10 now!  ");
