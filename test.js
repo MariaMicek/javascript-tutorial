@@ -21,3 +21,24 @@ var myResult = getAverage2(3,16,2,8,65);
 console.log("The average is " + myResult);
 
 
+//Not a number
+console.log(isNaN(2));
+
+var a = 12;
+var b = "banana";
+
+if (isNaN(b)) {
+    console.log("This aint a number...");
+} else {
+    console.log("Your lucky number is" + (a * b));
+}
+
+var aa = 12;
+var bb = 3;
+
+if (isNaN(bb)) {
+    console.log("This aint a number...");
+} else {
+    console.log("Your lucky number is " + (aa * bb));
+}
+
