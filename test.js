@@ -42,3 +42,24 @@ if (isNaN(bb)) {
     console.log("Your lucky number is " + (aa * bb));
 }
 
+//STRING
+var myString = "I\'m a \"fun\" ninja string";
+
+console.log(myString.toUpperCase());
+
+if (myString.indexOf("ninja") === -1) {
+    console.log("No ninja in this string. ");
+} else {
+    console.log("The word ninja starts at position " 
+    + myString.indexOf("ninja"));
+}
+
+var string1 = "abc";
+var string2 = "bcd";
+console.log(string1 === string2); //false
+console.log(string1 < string2); //true
+
+var string1 = "abc";
+var string2 = "ABC";
+console.log(string1.toUpperCase() === string2); //true
+console.log(string1 < string2); //false
