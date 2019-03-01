@@ -1,35 +1,27 @@
-//STRING
-var myString = "I\'m a \"fun\" ninja string";
+//ARREY
+var myArray = [];
+myArray[0] = 25;
+myArray[1] = "hello";
+myArray[2] = true;
+console.log(myArray);
 
-console.log(myString.toUpperCase());
+var myArray2 = [34,"hi",false,356];
+console.log(myArray2);
 
-if (myString.indexOf("ninja") === -1) {
-    console.log("No ninja in this string. ");
-} else {
-    console.log("The word ninja starts at position " 
-    + myString.indexOf("ninja"));
-}
+var myArray3 = new Array(5);
+myArray3[0] = 34;
+myArray3[1] = "anana";
+myArray3[2] = "lalala";
+myArray3[3] = false;
+myArray3[4] = 45;
+console.log(myArray3);
 
-var string1 = "abc";
-var string2 = "bcd";
-console.log(string1 === string2); //false
-console.log(string1 < string2); //true
+var myArray4 = new Array(3);
+myArray4 = [578,"lol",true];
+console.log(myArray4);
 
-var string1 = "abc";
-var string2 = "ABC";
-console.log(string1.toUpperCase() === string2); //true
-console.log(string1 < string2); //false
+//methods
+ console.log(myArray3.length);
+ console.log(myArray3.sort());
+ console.log(myArray3.reverse());
 
-//slice method
-var stringSlice = "hello world";
-var stringSlice2 = stringSlice.slice(2,8);
-var stringSlice3 = stringSlice.slice(3);
-console.log(stringSlice);
-console.log(stringSlice2);
-console.log(stringSlice3);
-
-//split method
-var tags = "banana, apple, orange, berry";
-var tagsArrey = tags.split(",");
-console.log(tags);
-console.log(tagsArrey);
