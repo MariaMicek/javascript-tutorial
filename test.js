@@ -1,27 +1,40 @@
-//ARREY
-var myArray = [];
-myArray[0] = 25;
-myArray[1] = "hello";
-myArray[2] = true;
-console.log(myArray);
+//OBJECTS
+//tworzenie obiektu zdefiniowanego przez js
+var myString = new String ();
+myString = "hello";
+console.log(myString);
 
-var myArray2 = [34,"hi",false,356];
-console.log(myArray2);
+var myString2 = "hello2";
+console.log(myString2);
 
-var myArray3 = new Array(5);
-myArray3[0] = 34;
-myArray3[1] = "anana";
-myArray3[2] = "lalala";
-myArray3[3] = false;
-myArray3[4] = 45;
-console.log(myArray3);
+console.log(myString2.length);       //property
+console.log(myString2.toUpperCase());      //method
 
-var myArray4 = new Array(3);
-myArray4 = [578,"lol",true];
-console.log(myArray4);
 
-//methods
- console.log(myArray3.length);
- console.log(myArray3.sort());
- console.log(myArray3.reverse());
+//tworzenie obiektu od podstaw
+var myCar = new Object();
 
+myCar.maxSpeed = 50;        //properties
+myCar.driver = "Mike";
+
+myCar.drive = function() {          //method
+    console.log("now driving");
+};
+
+console.log(myCar);
+console.log(myCar.maxSpeed);
+console.log(myCar.driver);
+myCar.drive();
+
+//skrócona wersja 
+var myCar2 = {
+    maxSpeed: 70,
+    driver: "John",
+    drive: function(speed, time){
+        console.log("How many miles? ");
+        console.log(speed * time);
+    }
+};
+
+console.log(myCar2.maxSpeed, myCar2.driver);
+myCar2.drive(50, 3);
