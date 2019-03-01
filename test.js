@@ -1,40 +1,42 @@
-//OBJECTS
-//tworzenie obiektu zdefiniowanego przez js
-var myString = new String ();
-myString = "hello";
-console.log(myString);
+console.log(this);
 
-var myString2 = "hello2";
-console.log(myString2);
-
-console.log(myString2.length);       //property
-console.log(myString2.toUpperCase());      //method
-
-
-//tworzenie obiektu od podstaw
-var myCar = new Object();
-
-myCar.maxSpeed = 50;        //properties
-myCar.driver = "Mike";
-
-myCar.drive = function() {          //method
-    console.log("now driving");
-};
-
-console.log(myCar);
-console.log(myCar.maxSpeed);
-console.log(myCar.driver);
-myCar.drive();
-
-//skrócona wersja 
-var myCar2 = {
+var myCar1 = {
     maxSpeed: 70,
     driver: "John",
     drive: function(speed, time){
         console.log("How many miles? ");
         console.log(speed * time);
-    }
+    },
+    test: function () {
+        console.log(this);
+    },
+    logDriver: function () {
+        console.log("The name of the driver is " + this.driver);
+    },
 };
 
-console.log(myCar2.maxSpeed, myCar2.driver);
+myCar1.test();
+myCar1.drive(70, 2.5);
+myCar1.logDriver();
+
+
+
+var myCar2 = {
+    maxSpeed: 50,
+    driver: "Mike",
+    drive: function(speed, time){
+        console.log("How many miles? ");
+        console.log(speed * time);
+    },
+    test: function () {
+        console.log(this);
+    },
+    logDriver: function () {
+        console.log("The name of the driver is " + this.driver);
+    },
+};
+
+myCar2.test();
 myCar2.drive(50, 3);
+myCar2.logDriver();
+
