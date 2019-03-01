@@ -1,42 +1,23 @@
-console.log(this);
+//constructor function
+var Car = function(maxSpeed, driver) {
 
-var myCar1 = {
-    maxSpeed: 70,
-    driver: "John",
-    drive: function(speed, time){
+    this.maxSpeed = maxSpeed;
+    this.driver = driver;
+    this.drive = function(speed, time){
         console.log("How many miles? ");
         console.log(speed * time);
-    },
-    test: function () {
-        console.log(this);
-    },
-    logDriver: function () {
+    };
+    this.logDriver = function() {
         console.log("The name of the driver is " + this.driver);
-    },
+    };
 };
 
-myCar1.test();
-myCar1.drive(70, 2.5);
-myCar1.logDriver();
+//objects based on constructor function
+var Car1 = new Car(35, "Basia");
+var Car2 = new Car(70, "Marysia");
+var Car3 = new Car(60, "Kasia");
 
-
-
-var myCar2 = {
-    maxSpeed: 50,
-    driver: "Mike",
-    drive: function(speed, time){
-        console.log("How many miles? ");
-        console.log(speed * time);
-    },
-    test: function () {
-        console.log(this);
-    },
-    logDriver: function () {
-        console.log("The name of the driver is " + this.driver);
-    },
-};
-
-myCar2.test();
-myCar2.drive(50, 3);
-myCar2.logDriver();
-
+//calling some of the properties and functions from objects
+Car1.drive(30, 1.5);
+Car2.logDriver();
+console.log(Car3.maxSpeed, Car3.driver);
