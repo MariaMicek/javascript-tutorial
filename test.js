@@ -1,21 +1,33 @@
-var colorChanger = document.getElementById("color-changer");
-var colors = ["red","pink","green","blue","yellow"];
-var counter = 0;
+console.log(document.forms.myForm);
+var myForm = document.forms.myForm;
 
-function changeColors() {
+console.log(myForm.name);
+console.log(myForm.hobbies);
+console.log(myForm.color);
 
-    if (counter >= colors.length) {
-        counter = 0;
-    }
+console.log(myForm.name.value);
+console.log(myForm.hobbies.value);
+console.log(myForm.color.value);
 
-    colorChanger.style.background = colors[counter];
-    counter++;
+//onfocus event
+myForm.name.onfocus = function() {
+    myForm.name.style.border = "4px solid pink";
 };
 
-var myTimer = setInterval(changeColors,3000);
-
-colorChanger.onclick = function () {
-
-    clearInterval(myTimer);
-    colorChanger.innerHTML = "Timer stopper";
+//onblur event
+myForm.name.onblur = function() {
+    myForm.name.style.border = "none";
 };
+
+//onsubmit event
+var message = document.getElementById("message");
+myForm.onsubmit = function() {
+    if (myForm.name.value == "") {
+        message.innerHTML = "please enter your name";
+        return false;
+    } else {
+        message.innerHTML = "";
+        return true;
+    };
+};
+
