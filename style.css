@@ -2,44 +2,31 @@ body{
     background: #eee;
 }
 
-#content{
+#message{
     width: 400px;
-    background: #fff;
+    background: #ddaaaa;
     padding: 20px;
-    padding-top: 0;
     font-family: calibri;
     font-size: 16px;
     color: #444;
+    text-align:center;
     margin: 0 auto;
+    border: 1px solid #ff7777;
+    font-weight: bold;
+    opacity:0;
+    
+    /*set transitions up*/
+    -webkit-transition: opacity 0.7s;
+    -moz-transition: opacity 0.7s;
+    transition: opacity 0.7s;
+}
 
-    max-height: 270px;
-    overflow: hidden;      /*ukrywa zawartość, która się nie mieści*/
+#message.show{
+    opacity: 1;
 
     /*set transitions up*/
-    -webkit-transition: max-height 0.7s;
-    -moz-transition: max-height 0.7s;
-    transition: max-height 0.7s;
+    -webkit-transition: opacity 0.7s;
+    -moz-transition: opacity 0.7s;
+    transition: opacity 0.7s;
 }
 
-#content.open{
-    max-height: 1000px;
-
-    /*set transitions up*/
-    -webkit-transition: max-height 0.7s;
-    -moz-transition: max-height 0.7s;
-    transition: max-height 0.7s;
-}
-
-#show-more{
-    background: #1594e5;
-    color: #fff;
-    font-family: calibri;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    display: block;
-    width: 140px;
-    padding: 10px;
-    margin: 20px auto;
-    cursor: pointer;
-}
