@@ -1,14 +1,19 @@
-var title = document.getElementsByTagName("h1")[0];
+var content = document.getElementById("content");
+var button = document.getElementById("show-more");
 
+button.onclick = function () {
+ 
+if (content.className == "open") {
 
-title.onclick = function () {
-    alert("you clicked me");
+    //shrink the box
+    content.className = "";
+    button.innerHTML = "Show more";
+
+} else {
+
+    //expand the box
+    content.className = "open";
+    button.innerHTML = "Show less";
+
 };
-
-title.onmouseover = function () {
-    this.setAttribute("style", "color:red;");
 };
-
-title.onmouseout = function () {
-    this.setAttribute("style", "color:black;");
-}
