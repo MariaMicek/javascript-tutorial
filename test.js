@@ -1,9 +1,21 @@
-var myMessage = document.getElementById("message");
+var colorChanger = document.getElementById("color-changer");
+var colors = ["red","pink","green","blue","yellow"];
+var counter = 0;
 
-function showMessage() {
+function changeColors() {
 
-    myMessage.className = "show";
+    if (counter >= colors.length) {
+        counter = 0;
+    }
 
+    colorChanger.style.background = colors[counter];
+    counter++;
 };
 
-setTimeout(showMessage, 3000);
+var myTimer = setInterval(changeColors,3000);
+
+colorChanger.onclick = function () {
+
+    clearInterval(myTimer);
+    colorChanger.innerHTML = "Timer stopper";
+};
